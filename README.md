@@ -15,7 +15,7 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 Thm : $T(\log_{2} n) \in O(\log_{5} n) \iff \exists c, n_0: T(\log_{2} n) \leq c \cdot (\log_{5} n) \forall n \geq n_0$
 
-Note : $ \log_{y}x = \frac{\log(x)}{\log(y)}$
+**Note** : $ \log_{y}x = \frac{\log(x)}{\log(y)}$
 
 Proof : 
 
@@ -23,9 +23,20 @@ Proof :
 
 ==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq c \cdot \log_{5}n $
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\frac{\log(n)}{\log(2)}) \leq c \cdot (\frac{\log(n)}{\log(5)}) $
+==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq c \cdot \log_{5} n$
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\frac{1}{\log(2)}) \leq c \cdot (\frac{1}{\log(5)}) $ 
+**NOTE** : *let* $c = \frac{1}{\log_{2}5}$
+
+==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq \frac{1}{\log_{5}(2)} \cdot \log_{5} n$
+
+==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq \frac{\log_{5}n}{\log_{5}2} $ 
+
+**NOTE** : $\log_{x}y = \frac{log_{z}y}{log_z{x}}$
+
+==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq \log_{2}(n) $
 
 ==> True
 
+<u>RESOURCES</u>
+
+- Lab TA
