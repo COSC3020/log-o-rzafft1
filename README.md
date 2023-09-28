@@ -11,32 +11,45 @@ markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-$T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
 
-Thm : $T(\log_{2} n) \in O(\log_{5} n) \iff \exists c, n_0: T(\log_{2} n) \leq c \cdot (\log_{5} n) \forall n \geq n_0$
+<u>**Proof :**</u>
 
-**Note** : $ \log_{y}x = \frac{\log(x)}{\log(y)}$
+==> Prove that $\Theta(\log_{2} n) = \Theta(\log_{5} n)$
 
-Proof : 
+**NOTE** : <i>$\theta(\log_{2} n)$ and $\theta(\log_{5} n) $ are both sets</i> 
 
-==> $T(\log_{2} n) \in O(\log_{5} n)$
+**NOTE** : <i>to prove the equivelence of two sets we have determine that any element in $\theta(\log_{2} n)$ is also in $\theta(\log_{5} n)$, and vice versa</i> 
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq c \cdot \log_{5}n $
+**NOTE** : <i>Def of Big $\Theta$ : $T(n) \in \Theta(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$</i>
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq c \cdot \log_{5} n$
+<u>**Prove that any element in $\theta(\log_{2} n)$ is also in $\theta(\log_{5} n)$**</u>
 
-**NOTE** : *let* $c = \frac{1}{\log_{2}5}$
+==> $T(n) \in \Theta(\log_{2} n) \iff \exists c, n_0: T(n) \leq c \cdot (\log_{2} n) \forall n \geq n_0$
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq \frac{1}{\log_{5}(2)} \cdot \log_{5} n$
+====> **NOTE** : <i>we can multiply by a constant factor to change bases</i>
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq \frac{\log_{5}n}{\log_{5}2} $ 
+====> **NOTE** : <i>$\log_{x}y = \frac{log_{z}y}{log_z{x}}$</i>
 
-**NOTE** : $\log_{x}y = \frac{log_{z}y}{log_z{x}}$
+====> $T(n) \leq c \cdot \frac{1}{\log_{5}2} \cdot (\log_{2} n)$
 
-==> $T(\log_{2} n) \in O(\log_{5} n) \iff T(\log_{2} n) \leq \log_{2}(n) $
+====> $T(n) \leq d \cdot (\log_{5}n)$
 
-==> True
+====> $T(n) \in \Theta(\log_{5}{n})$
 
-<u>RESOURCES</u>
+==> $\forall T(n) \in \Theta(\log_{2}n) \implies T(n) \in \Theta(log_{5}n)$
 
-- Lab TA
+<u>**Prove that any element in $\Theta(\log_{5}n)$ is also in $\theta(\log_{2}n)$**</u>
+
+==> $T(n) \in \Theta(\log_{5}n) \iff \exists c, n_0: T(n) \leq c \cdot (\log_{5} n) \forall n \geq n_0$
+
+====> **NOTE** : <i>we can multiply by a constant factor to change bases</i>
+
+====> **NOTE** : <i>$\log_{x}y = \frac{log_{z}y}{log_z{x}}$</i>
+
+====> $T(n) \leq c \cdot \frac{1}{\log_{2}5} \cdot (\log_{5} n)$
+
+====> $T(n) \leq d \cdot (\log_{2} n)$
+
+====> $T(n) \in \Theta(\log_{2}{n})$
+
+==> $\forall T(n) \in \Theta(\log_{5}n) \implies T(n) \in \Theta(log_{2}n)$
