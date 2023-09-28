@@ -14,9 +14,9 @@ might help with the notation for mathematical expressions.
 
 <u>**Proof :**</u>
 
-==> Prove that $\Theta(\log_{2} n) = \Theta(\log_{5} n)$
+==> Prove that $\Theta(\log_{2}n) = \Theta(\log_{5}n)$
 
-**NOTE** : <i>$\theta(\log_{2} n)$ and $\theta(\log_{5} n) $ are both sets</i> 
+**NOTE** : $\theta(\log_{2} n)$ and $\theta(\log_{5} n)$ are both sets
 
 **NOTE** : <i>to prove the equivelence of two sets we have determine that any element in $\theta(\log_{2} n)$ is also in $\theta(\log_{5} n)$, and vice versa</i> 
 
